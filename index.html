@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Variable</title>
+  <style>
+    :root {
+      --max-width: 1100px;
+      --primary-color: #333;
+      --secondary-color: #ccc;
+      --light-color: #f4f4f4;
+      --box-1-width: 1;
+      --box-2-width: 2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4;
+      background: var(--light-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      margin: auto;
+      max-width: var(--max-width);
+    }
+
+    .box {
+      background-color: var(--primary-color);
+      border-bottom: 5px var(--secondary-color) solid;
+      color: #fff;
+      padding: 1rem;
+      margin: 1rem;
+    }
+    .box-1{ flex: var(--box-1-width) }
+    .box-2{ flex: var(--box-2-width) }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>CSS Variables</h1>
+  </header>
+  <div class="container">
+    <div class="box box-1">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="box box-2">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</body>
+
+</html>
